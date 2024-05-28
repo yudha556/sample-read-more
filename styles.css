@@ -1,0 +1,228 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #111845;
+}
+
+.container {
+    margin: 0 auto;
+    margin-top: 150px;
+}
+
+h1 {
+    font-family: "Poetsen One", sans-serif;
+}
+
+p {
+    color: #fffcfc;
+}
+
+.background {
+    background-image: url("https://3.bp.blogspot.com/-piZWCW2uUbg/W2fPXxkWZgI/AAAAAAAAOu0/eydmMjTIqcwLMHEEr2H7imqoRTxMw4o9QCLcBGAs/s1600/among_trees_night_dribbble.png");
+    height: 400px;
+    width: 800px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #2a3cad;
+    border-radius: 4px;
+    box-shadow: 0px 0px 5px #2a3cad;
+    position: relative;
+}
+
+.box {
+    border: 2px solid #2a3cad;
+    height: 390px;
+    background: #111845a6;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgb(23, 32, 90);
+}
+
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 350px;
+    background: #111845a6;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgb(23, 32, 90);
+    border: 2px solid #2a3cad;
+    color: white;
+    padding: 20px;
+}
+
+.box:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.box:hover:before {
+    left: -50%;
+    transform: skewX(-5deg);
+}
+
+.box .content {
+    position: absolute;
+    top: -20px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border: 1px solid #f0a591;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(9, 0, 0, 0.5);
+}
+
+.box span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    box-sizing: border-box;
+
+}
+
+.box span:nth-child(1) {
+    transform: rotate(0deg);
+}
+
+.box span:nth-child(2) {
+    transform: rotate(90deg);
+    left: 203px;
+}
+
+.box span:nth-child(3) {
+    transform: rotate(180deg);
+}
+
+.box span:nth-child(4) {
+    transform: rotate(270deg);
+    left: -204px;
+}
+
+.box span:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #50dfdb;
+    animation: animate 4s linear infinite;
+}
+@keyframes animate {
+    0% {
+    transform:scaleX(0);
+    transform-origin: left;
+    }
+    50%
+    {
+      transform:scaleX(1);
+    transform-origin: left;
+    }
+    50.1%
+    {
+      transform:scaleX(1);
+    transform-origin: right;
+      
+    }
+    
+    100%
+    {
+      transform:scaleX(0);
+    transform-origin: right;
+      
+    }
+    
+    
+  } 
+
+.content {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 40px;
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+}
+
+button {
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.cbtn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
+}
+
+.btn {
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    background: rgb(255, 27, 0);
+    background: linear-gradient(0deg, rgba(255, 27, 0, 1) 0%, rgba(251, 75, 2, 1) 100%);
+}
+
+.btn:hover {
+    color: #f0094a;
+    background: transparent;
+    box-shadow: none;
+}
+
+.btn:before,
+.btn:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: #f0094a;
+    box-shadow:
+        -1px -1px 5px 0px #fff,
+        7px 7px 20px 0px #0003,
+        4px 4px 5px 0px #0002;
+    transition: 400ms ease all;
+}
+
+.btn:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+}
+
+.btn:hover:before,
+.btn:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
+}
